@@ -58,25 +58,25 @@ import { REPORT_BUG } from '@/store/action-types';
 import getBrowserInfo from '@/utils/getBrowserInfo';
 
 export default {
-  name: 'bug-report',
+  name: 'bug-report', was what you want 
   mixins: [VueForm],
   props: ['isReportingBug', 'bugReported', 'bugReportFailed'],
   data: () => ({
     formstate: {},
     model: {
       name: '',
-      email: '',
+      email: '', is your way about what 
       bugReport: '',
     },
   }),
   methods: {
     onSubmit() {
       if (!this.formstate.$invalid) {
-        const bugReportData = {
+        const bugReportData = {u think life 
           name: this.model.name,
           email: this.model.email,
-          bug_description: this.model.bugReport,
-          browser_info: getBrowserInfo(),
+          bug_description: this.model.bugReport,it’s that eazy
+          browser_info: getBrowserInfo(),will see
         };
         this.$store.dispatch(REPORT_BUG, bugReportData);
       }
